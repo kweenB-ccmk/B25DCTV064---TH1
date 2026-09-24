@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bùi Ánh Quyên — Trang giới thiệu bản thân</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap nav-row">
+    <div class="brand">Quyên</div>
+    <nav><ul id="navList">
+      <li><a href="#about" class="nav-link">Bản thân</a></li>
+      <li><a href="#skills" class="nav-link">Kĩ năng</a></li>
+      <li><a href="#projects" class="nav-link">Dự án</a></li>
+      <li><a href="#hobbies" class="nav-link">Sở thích</a></li>
+      <li><a href="#contact" class="nav-link">Liên hệ với tôi</a></li>
+    </ul></nav>
+    <div class="nav-actions">
+      <button id="themeBtn" aria-label="Đổi giao diện sáng/tối">🌙</button>
+      <button id="hamburger" aria-label="Mở menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="about">
+  <div class="wrap hero-grid">
+    <div class="avatar-wrap">
+      <img id="avatarImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23fff4f5'/%3E%3Ccircle cx='100' cy='78' r='38' fill='%23c11f36'/%3E%3Cellipse cx='100' cy='190' rx='62' ry='55' fill='%23c11f36'/%3E%3C/svg%3E" alt="Ảnh đại diện Bùi Ánh Quyên">
+      <span class="avatar-hint">Nhấn để đổi ảnh</span>
+      <input type="file" id="avatarInput" accept="image/*" style="display:none">
+    </div>
+    <div>
+      <h1>Xin chào, mình là Quyên!</h1>
+      <p class="role sans">Bùi Ánh Quyên — Sinh viên năm hai ngành AIoT, Học viện Công nghệ Bưu chính Viễn thông</p>
+      <ul class="facts">
+        <li>Sinh ngày 31/10/2007</li>
+        <li>Quê quán: Đông Anh, Hà Nội</li>
+        <li>Sinh viên năm hai ngành AIoT — Học viện Công nghệ Bưu chính Viễn thông</li>
+        <li>GPA năm nhất: 3.35/4.0</li>
+      </ul>
+      <p class="bio">Là một sinh viên năm 2 mang trong mình tình yêu mãnh liệt với công nghệ thông minh, tôi luôn bị cuốn hút bởi khả năng biến những ý tưởng trên bản vẽ thành các giải pháp kết nối thực tế. Đam mê lớn nhất của tôi là khám phá cách công nghệ có thể thổi hồn vào vật thể, giúp tối ưu hóa cuộc sống và giải quyết các bài toán của con người. Mong ước của tôi là được rèn luyện trong một môi trường thực tế chuyên nghiệp, nơi tôi có thể theo đuổi đam mê sáng tạo, biến sự tò mò thành động lực cống hiến và từng bước trưởng thành trên con đường phát triển sản phẩm thông minh.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2 class="section-title reveal">Kĩ năng</h2>
+    <p class="section-sub reveal">Những gì mình đã và đang rèn luyện</p>
+    <div class="skills-grid">
+      <div class="skill-card reveal"><h3>IELTS 6.0</h3><p>Tiếng Anh giao tiếp và học thuật ở mức khá.</p></div>
+      <div class="skill-card reveal"><h3>Lập trình</h3><p>Kiến thức cơ bản về Python, C và Machine Learning.</p></div>
+      <div class="skill-card reveal"><h3>Làm việc nhóm</h3><p>Phối hợp tốt trong các dự án và bài tập nhóm.</p></div>
+      <div class="skill-card reveal"><h3>Tin học văn phòng</h3><p>Thành thạo Word, Excel.</p></div>
+      <div class="skill-card reveal"><h3>Thái độ làm việc</h3><p>Chăm chỉ, năng nổ, cẩn thận.</p></div>
+      <div class="skill-card reveal"><h3>Tinh thần học hỏi</h3><p>Luôn chủ động tìm tòi kiến thức mới.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--bg-soft); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <h2 class="section-title reveal">Dự án</h2>
+    <p class="section-sub reveal">Một vài sản phẩm mình đã thực hiện — gõ từ khóa hoặc chọn thẻ để lọc</p>
+    <div class="filter-row reveal">
+      <input type="text" id="projSearch" placeholder="Tìm dự án theo từ khóa hoặc tag...">
+      <button class="tag-btn active" data-tag="all">Tất cả</button>
+      <button class="tag-btn" data-tag="web">Web</button>
+      <button class="tag-btn" data-tag="ai">AI</button>
+      <button class="tag-btn" data-tag="game">Game</button>
+    </div>
+    <div class="proj-grid" id="projGrid">
+      <div class="proj-card reveal" data-tags="web ai note ghi chép">
+        <h3>Web hỗ trợ ghi chép cuộc họp online</h3>
+        <p>Trang web giúp sinh viên và nhân viên văn phòng tự động ghi chép, tóm tắt nội dung các cuộc họp trực tuyến.</p>
+        <span class="proj-tag">Web · AI</span>
+      </div>
+      <div class="proj-card reveal" data-tags="web portfolio giới thiệu bản thân">
+        <h3>Web giới thiệu bản thân</h3>
+        <p>Trang cá nhân giới thiệu thông tin, kĩ năng và dự án — chính là trang bạn đang xem!</p>
+        <span class="proj-tag">Web</span>
+      </div>
+      <div class="proj-card reveal" data-tags="web tuyển sinh ngành học">
+        <h3>Web tuyển sinh ngành học</h3>
+        <p>Trang giới thiệu và tuyển sinh cho ngành học, cung cấp thông tin chương trình đào tạo cho tân sinh viên.</p>
+        <span class="proj-tag">Web</span>
+      </div>
+      <div class="proj-card reveal" data-tags="game rắn cờ vua">
+        <h3>Trò chơi Rắn săn mồi &amp; Cờ vua</h3>
+        <p>Xây dựng hai trò chơi kinh điển: rắn săn mồi và cờ vua, rèn luyện tư duy logic khi lập trình.</p>
+        <span class="proj-tag">Game</span>
+      </div>
+    </div>
+    <p class="no-result" id="noResult">Không tìm thấy dự án phù hợp.</p>
+  </div>
+</section>
+
+<section id="hobbies">
+  <div class="wrap">
+    <h2 class="section-title reveal">Sở thích</h2>
+    <p class="section-sub reveal">Những điều mình yêu thích ngoài giờ học</p>
+    <div class="hobby-grid">
+      <div class="hobby-card reveal"><div class="ico">🎬</div><p>Xem phim hành động</p></div>
+      <div class="hobby-card reveal"><div class="ico">📚</div><p>Đọc sách trinh thám &amp; công nghệ</p></div>
+      <div class="hobby-card reveal"><div class="ico">🍳</div><p>Nấu ăn</p></div>
+      <div class="hobby-card reveal"><div class="ico">🏊</div><p>Đi bơi</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--bg-soft); border-top:1px solid var(--border);">
+  <div class="wrap">
+    <h2 class="section-title reveal">Liên hệ với tôi</h2>
+    <p class="contact-note reveal">Để lại lời nhắn, mình sẽ phản hồi sớm nhất có thể!</p>
+    <div class="contact-wrap">
+      <form id="contactForm" class="reveal" novalidate>
+        <div class="field">
+          <label for="fullname">Họ và tên</label>
+          <input type="text" id="fullname" name="fullname">
+          <span class="err" id="err-fullname"></span>
+        </div>
+        <div class="field">
+          <label for="phone">Số điện thoại</label>
+          <input type="text" id="phone" name="phone">
+          <span class="err" id="err-phone"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email">
+          <span class="err" id="err-email"></span>
+        </div>
+        <div class="field">
+          <label for="message">Lời nhắn</label>
+          <textarea id="message" name="message" rows="4" maxlength="300"></textarea>
+          <div class="charcount"><span id="charCount">0</span>/300</div>
+          <span class="err" id="err-message"></span>
+        </div>
+        <button type="submit" id="submitBtn">Gửi lời nhắn</button>
+        <p id="formStatus"></p>
+      </form>
+      <div id="toast"><span class="tick">✅</span><span id="toastText"></span></div>
+      <div class="contact-info reveal">
+        <h3>Thông tin liên hệ</h3>
+        <p>👤 Bùi Ánh Quyên</p>
+        <p>📞 0358 058 958</p>
+        <p>🎓 Học viện Công nghệ Bưu chính Viễn thông</p>
+        <p>📍 Đông Anh, Hà Nội</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© <span id="year"></span> Bùi Ánh Quyên. Được tạo với ❤ bởi chính mình.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
